@@ -27,10 +27,6 @@ input {
   font-size: 1.25rem;
 }
 
-input:focus {
-  border-color: #5fc9f3;
-}
-
 button {
   cursor: pointer;
   border-top-right-radius: 0.5rem;
