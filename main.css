@@ -71,3 +71,7 @@ h1 {
   display: flex;
   width: 100%;
 }
+
+.search-btn {
+  font-size: 1.25rem;
+}
