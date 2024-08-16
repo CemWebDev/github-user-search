@@ -14,10 +14,19 @@ button,
 input {
   border: 0;
   outline: 0;
+  padding: 0.5rem 2rem;
+}
+
+input {
+  width: 100%;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
 }
 
 button {
   cursor: pointer;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 h1 {
@@ -42,8 +51,5 @@ h1 {
 .container__form {
   display: flex;
   width: 100%;
-  background-color: red;
-}
-.container__form input {
-    width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
 }
