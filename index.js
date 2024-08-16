@@ -1,3 +1,5 @@
+import { userData } from "./data";
+
 const searchBtn = document.querySelector(".search-btn");
 
 const searchUser = () => {

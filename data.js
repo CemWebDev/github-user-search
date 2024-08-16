@@ -1,4 +1,4 @@
-const userData = [
+export const userData = [
   { label: "Name", key: "name" },
   { label: "Username", key: "login" },
   { label: "Public Repositories", key: "public_repos" },
