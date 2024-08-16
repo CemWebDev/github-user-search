@@ -1,5 +1,4 @@
 export const userData = [
-  { label: "Name", key: "name" },
   { label: "Username", key: "login" },
   { label: "Public Repositories", key: "public_repos" },
   { label: "Followers", key: "followers" },

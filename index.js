@@ -1,4 +1,4 @@
-import { userData } from "./data";
+import { userData } from "./data.js";
 
 const searchBtn = document.querySelector(".search-btn");
 
