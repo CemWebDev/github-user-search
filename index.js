@@ -1,7 +1,7 @@
 import { userData } from "./data.js";
 
 const searchBtn = document.querySelector(".search-btn");
-const githubProfile = document.querySelector(".github-profile");
+const profileLink = document.querySelector(".profile-link");
 
 const searchUser = () => {
   const username = document.querySelector("#username-input").value;
@@ -33,6 +33,7 @@ const searchUser = () => {
         } else {
           console.error(`Element with id ${item.key} not found.`);
         }
+       profileLink.href = data.html_url;
       });
     })
     .catch((error) => {
