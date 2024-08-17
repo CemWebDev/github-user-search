@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: 0.3s ease all;
+  transition: 0.5s ease all;
 }
 
 body {
@@ -19,6 +19,10 @@ input {
   border: 0;
   outline: 0;
   padding: 0.75rem 2.5rem;
+}
+
+a {
+  text-decoration: none;
 }
 
 input {
@@ -105,6 +109,7 @@ h1 {
 }
 
 .github-profile {
+  position: relative;
   background-color: #fff;
   max-width: 450px;
   width: 100%;
@@ -117,17 +122,41 @@ h1 {
   gap: 16px;
 }
 
-.avatar {
-  width: 200px;
-  height: auto;
+.github-profile a {
+  color: #333;
+}
+
+.github-profile i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  width: 3rem;
+  height: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+.github-profile i:hover {
+  background-color: #333;
+  color: #fff;
+  box-shadow: none;
+}
+
+.avatar {
+  width: 200px;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
   height: auto;
   border-radius: 50%;
 }
 
 .user-data-item {
-  background-color: red;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
