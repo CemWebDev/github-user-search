@@ -2,12 +2,14 @@ import { userData } from "./data.js";
 
 const searchBtn = document.querySelector(".search-btn");
 const profileLink = document.querySelector(".profile-link");
+const githubProfile = document.querySelector(".github-profile");
 
 const searchUser = () => {
   const username = document.querySelector("#username-input").value;
   fetch(`https://api.github.com/users/${username}`)
     .then((response) => response.json())
     .then((data) => {
+      githubProfile.style.display = "flex";
       Array.from(document.getElementsByClassName("user-data-item")).forEach(
         (element) => {
           element.innerHTML = "";
@@ -28,7 +30,7 @@ const searchUser = () => {
           } else if (item.key === "login") {
             element.innerHTML = `<h2>${value}</h2>`;
           } else {
-            element.innerHTML = `<div>${item.label}</div>: ${value}`;
+            element.innerHTML = `<div>${item.label}:</div>  <div>${value}</div>`;
           }
         } else {
           console.error(`Element with id ${item.key} not found.`);
