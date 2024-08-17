@@ -5,9 +5,22 @@ const profileLink = document.querySelector(".profile-link");
 const githubProfile = document.querySelector(".github-profile");
 
 const searchUser = () => {
-  const username = document.querySelector("#username-input").value;
+  const username = document.querySelector("#username-input").value.trim();
+
+  if (!username) {
+    githubProfile.style.display = "none";
+    alert("Username cannot be empty");
+    return;
+  }
   fetch(`https://api.github.com/users/${username}`)
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) {
+        githubProfile.style.display = "none";
+        alert("User could not find!");
+        throw new Error("User could not find.");
+      }
+      return response.json();
+    })
     .then((data) => {
       githubProfile.style.display = "flex";
       Array.from(document.getElementsByClassName("user-data-item")).forEach(
@@ -15,11 +28,9 @@ const searchUser = () => {
           element.innerHTML = "";
         }
       );
-
       userData.forEach((item) => {
         const value = data[item.key];
         const element = document.getElementById(item.key);
-
         if (element) {
           if (item.key === "avatar_url") {
             const img = document.createElement("img");

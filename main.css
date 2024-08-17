@@ -122,7 +122,7 @@ h1 {
 }
 
 .github-profile a {
-  color: #333;
+  color: #081f37;
 }
 
 .github-profile i {
@@ -138,11 +138,6 @@ h1 {
   justify-content: center;
   font-size: 1.25rem;
   cursor: pointer;
-}
-.github-profile i:hover {
-  background-color: #333;
-  color: #fff;
-  box-shadow: none;
 }
 
 .user-container {
