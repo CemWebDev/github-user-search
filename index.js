@@ -28,12 +28,12 @@ const searchUser = () => {
           } else if (item.key === "login") {
             element.innerHTML = `<h2>${value}</h2>`;
           } else {
-            element.innerHTML = `${item.label}: ${value}`;
+            element.innerHTML = `<div>${item.label}</div>: ${value}`;
           }
         } else {
           console.error(`Element with id ${item.key} not found.`);
         }
-       profileLink.href = data.html_url;
+        profileLink.href = data.html_url;
       });
     })
     .catch((error) => {
