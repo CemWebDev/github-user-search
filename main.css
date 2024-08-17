@@ -27,6 +27,10 @@ input {
   font-size: 1.25rem;
 }
 
+input::placeholder {
+  color: #fff;
+}
+
 button {
   cursor: pointer;
   border-top-right-radius: 0.5rem;
@@ -94,4 +98,11 @@ h1 {
   h1 {
     font-size: 1.5rem;
   }
+}
+
+.github-profile {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, .7);
 }
