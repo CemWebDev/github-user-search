@@ -10,6 +10,10 @@ body {
   background-color: #081f37;
 }
 
+img {
+  display: flex;
+}
+
 button,
 input {
   border: 0;
@@ -102,7 +106,28 @@ h1 {
 
 .github-profile {
   background-color: #fff;
+  max-width: 450px;
+  width: 100%;
   border-radius: 0.5rem;
   padding: 1rem;
-  box-shadow: 0 4px 6px rgba(255, 255, 255, .7);
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.avatar {
+  width: 200px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  border-radius: 50%;
+}
+
+.user-data-item {
+  background-color: red;
+  width: 100%;
 }

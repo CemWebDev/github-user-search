@@ -8,6 +8,7 @@ const searchUser = () => {
   fetch(`https://api.github.com/users/${username}`)
     .then((response) => response.json())
     .then((data) => {
+      githubProfile.innerHTML = "";
 
       userData.forEach((item) => {
         const value = data[item.key];
@@ -18,6 +19,8 @@ const searchUser = () => {
           const img = document.createElement("img");
           img.src = value;
           img.alt = `${data.login}'s avatar`;
+          img.classList.add("avatar")
+          element.appendChild(img);
         } else {
           element.innerHTML = `<div> ${item.label}: ${value} </div>`;
         }
